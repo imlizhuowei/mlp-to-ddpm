@@ -1,86 +1,30 @@
-# Basic-AI-models-Collection
-> A collection of fundamental deep learning models implemented from scratch using PyTorch (and pure NumPy). Fully annotated with study notes, designed for deep learning beginners to practice and understand core concepts.
+# Deep learning from scratch
 
----
+The models I implemented when I first learned deep learning, in March 2026: from a NumPy MLP on March 10 to my own DDPM on March 20, after classes. Each file is dated by the day I wrote it.
 
-## ✨ Key Features
-- **Beginner-Friendly**: All models are built from the ground up (no over-encapsulated "black boxes") to help understand underlying principles
-- **Clear Learning Path**: Well-organized structure and step-by-step implementation for smooth, stress-free learning
-- **Detailed Annotations**: Code includes comprehensive study notes, recording key ideas and common pitfalls
-- **Rich Model Coverage**: Covers classic foundational models like MLP, CNN, ResNet, UNet, and DDPM
-- **Out-of-the-Box**: Provides ready-to-run training scripts with minimal configuration required
+| written | file | model | what it adds |
+|---|---|---|---|
+| Mar 10 | `myMLP/MLP_numpy3.10.py` | MLP in pure NumPy | forward pass, backpropagation and gradient descent by hand (MNIST) |
+| Mar 11 | `myMLP/MLP_torch3.11.py` | MLP in PyTorch | the same network with autograd |
+| Mar 12 | `myCNN/CNN_torch3.12.py` | Convolutional network | weight sharing and local receptive fields (MNIST) |
+| Mar 14 | `myResNet/ResNet_3.14.py` | Residual network | skip connections, so deeper networks still train |
+| Mar 15 | `myUNet/UnetStructure_3.15.py` | U-Net | encoder–decoder for pixel-level segmentation (Oxford-IIIT Pet) |
+| Mar 18 | `myUNet/betterUnet3.18.py` | U-Net, revised | a cleaner second version |
+| Mar 20 | `DDPM/myDDPM3.20.py` | DDPM | generating images by learning to reverse a noising process (MNIST) |
 
----
+`DDPM/claude'sDDPM3.18.py` is a commented walkthrough I studied before writing my own version two days later; it is kept for reference, and is not my implementation.
 
-## 📁 Directory Structure
-```
-Basic-AI-models-Collection/
-├── myMLP/          # Multi-Layer Perceptron (MNIST handwritten digit classification)
-├── myCNN/          # Convolutional Neural Network (image classification task)
-├── myResNet/       # Residual Network (solves deep network degradation problem)
-├── myUNet/         # U-Net (foundation for medical image segmentation)
-├── DDPM/           # Denoising Diffusion Probabilistic Model (foundation for generative AI)
-├── data/           # Automatic dataset download and storage directory
-├── requirements.txt # Environment dependency list
-└── README.md
-```
-> 💡 **Tip**: For a smooth learning journey, it is recommended to explore the models in the order shown above.
----
+The comments are my study notes, in Chinese.
 
-## 🚀 Quick Start
+## Run
 
-### 1. Clone the Repository
 ```bash
-git clone https://github.com/[Your-Username]/Basic-AI-models-Collection.git
-cd Basic-AI-models-Collection
+pip install torch torchvision numpy matplotlib pillow
+python myCNN/CNN_torch3.12.py
 ```
 
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-> Core dependencies: `torch`, `numpy`, `matplotlib`, `torchvision`
-
-### 3. Run Examples
-Take CNN training as an example:
-```bash
-cd myCNN
-python train.py
-```
-> For other models, follow the same pattern: enter the corresponding directory and execute `train.py`.
+Datasets download on first run.
 
 ---
 
-## 📖 Learning Guide
-For optimal learning progress, we recommend following this order:
-1. **myMLP**: Understand fully connected networks, backpropagation, and gradient descent
-2. **myCNN**: Learn core computer vision concepts (convolution, pooling, receptive field)
-3. **myResNet**: Master residual connections and deep network training techniques
-4. **myUNet**: Explore encoder-decoder architecture and skip connections
-5. **DDPM**: Get started with diffusion models and understand generative AI fundamentals
-
-Each model directory contains detailed annotations. You can:
-- First run the code to observe results
-- Then read line-by-line annotations to understand principles
-- Try modifying hyperparameters (e.g., learning rate, number of layers) to observe changes
-
----
-
-## 🤝 Contribution Guidelines
-Contributions of any kind are welcome! If you find bugs or have improvement ideas:
-1. Fork this repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-> You are free to use, modify, and distribute the code in this project, as long as you retain the original copyright notice.
-
----
-
-## 💬 Contact
-If you have questions or suggestions, feel free to reach out via GitHub Issues or email: [your-email@example.com].
+Zhuowei Li · later work: [realgain](https://github.com/imlizhuowei/realgain), checking whether self-improving agents really improve

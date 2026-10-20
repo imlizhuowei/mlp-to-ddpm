@@ -12,10 +12,6 @@ The models I implemented when I first learned deep learning, in March 2026: from
 | Mar 18 | `myUNet/betterUnet3.18.py` | U-Net, revised | a cleaner second version |
 | Mar 20 | `DDPM/myDDPM3.20.py` | DDPM | generating images by learning to reverse a noising process (MNIST) |
 
-`DDPM/claude'sDDPM3.18.py` is a commented walkthrough I studied before writing my own version two days later; it is kept for reference, and is not my implementation.
-
-The comments are my study notes, in Chinese.
-
 ## Run
 
 ```bash

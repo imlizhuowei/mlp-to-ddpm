@@ -1,6 +1,6 @@
-# Deep learning from scratch
+# From MLP to DDPM
 
-The models I implemented when I first learned deep learning, in March 2026: from a NumPy MLP on March 10 to my own DDPM on March 20, after classes. Each file is dated by the day I wrote it.
+Deep learning from scratch, March 2026: from a hand-written NumPy MLP on March 10 to my own DDPM on March 20. Each file is dated by the day I wrote it.
 
 | written | file | model | what it adds |
 |---|---|---|---|
